@@ -608,6 +608,7 @@ module DocusignRest
       post_body = {
         emailBlurb:   "#{options[:email][:body] if options[:email]}",
         emailSubject: "#{options[:email][:subject] if options[:email]}",
+        brandId:            options[:brand_id],
         documents: get_documents(ios),
         recipients: {
           signers: get_signers(options[:signers])
